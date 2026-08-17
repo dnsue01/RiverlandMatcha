@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverland — Dream Matcha Rotation</title>
+<link rel="icon" type="image/avif" href="favicon.avif">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loader" class="loader">
+  <div class="cup-scene">
+    <div class="pour-stream stream-green"></div>
+    <div class="pour-stream stream-pink"></div>
+    <div class="steam"><span></span><span></span><span></span></div>
+    <div class="matcha-cup">
+      <div class="matcha-liquid">
+        <div class="liquid-layer layer-green"></div>
+        <div class="liquid-layer layer-pink"></div>
+      </div>
+      <div class="cup-shine"></div>
+    </div>
+    <div class="cup-handle"></div>
+    <div class="cup-saucer"></div>
+  </div>
+  <p class="loader-text">PREPARANDO TU <span class="matcha-word">MATCHA</span><span class="loader-dots"><span>.</span><span>.</span><span>.</span></span></p>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<header class="topbar">
+  <h1 class="logo"><img src="img/logo.png" alt="RIVERLAND"></h1>
+  <p class="subtitle">DREAM <span class="matcha-word">MATCHA</span> ROTATION · ASTURIAS 2026</p>
+</header>
+
+<main class="layout">
+  <section class="table-section">
+    <div class="table-head">
+      <div class="table-title-group">
+        <h2>TU MESA</h2>
+        <span class="slots-indicator" id="slotsIndicator">0 / 8 OCUPADOS</span>
+      </div>
+      <div class="actions">
+        <button id="shuffle" class="btn" title="Llenar con 8 artistas aleatorios">ALEATORIO</button>
+        <button id="clear" class="btn btn-ghost" title="Vaciar todos los huecos">VACIAR</button>
+        <button id="share" class="btn" title="Copiar alineación">COPIAR LINEUP</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table" id="table">
+        <div class="table-center">
+          <img class="table-center-logo" src="img/logo.png" alt="RIVERLAND">
+          <span class="table-center-sub">8 SLOTS · <span class="matcha-word">MATCHA</span></span>
+        </div>
+      </div>
+    </div>
+    <p class="hint">Arrastra un artista a un hueco · Clic en artista = añade a la mesa · Clic en hueco lleno = lo quita</p>
+  </section>
+
+  <aside class="roster-section">
+    <div class="roster-head">
+      <div class="roster-title-row">
+        <h2>ARTISTAS</h2>
+        <span class="count-badge" id="count">83</span>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="search" class="search" type="search" placeholder="BUSCAR ARTISTA O ESCENARIO..." autocomplete="off" spellcheck="false">
+        <button id="searchClear" class="search-clear" aria-label="Limpiar búsqueda" style="display:none;">✕</button>
+      </div>
+      <div class="filters" id="filters">
+        <button class="chip is-active" data-day="all">TODOS <span class="chip-count" id="count-all">83</span></button>
+        <button class="chip" data-day="VIE">VIE 21 <span class="chip-count" id="count-vie">27</span></button>
+        <button class="chip" data-day="SAB">SÁB 22 <span class="chip-count" id="count-sab">28</span></button>
+        <button class="chip" data-day="DOM">DOM 23 <span class="chip-count" id="count-dom">28</span></button>
+      </div>
+    </div>
+    <div class="grid" id="roster"></div>
+  </aside>
+</main>
+
+<footer class="foot">RIVERLAND 2026 · EL VALLE / EL BOSQUE / LA CARPA · ARRIONDAS, ASTURIAS</footer>
+
+<script src="artists.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
